@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+var vahoras, numhoras, porcen, otracosa, sueldot,monto,comision;
+
+const subsidiot = 97002
+
+numhoras = parseInt(prompt("digite numero de horas trabajadas"));
+
+vahoras = parseFloat(prompt("digite el valor de las horas"));
+
+porcen = parseFloat(prompt("digite el porcentaje de la comision"));
+
+monto = parseFloat(prompt("ingrese las ventas realizadas "));
+
+porcen = porcen/100;
+otracosa = numhoras*vahoras;
+comision = monto*porcen;
+sueldot = otracosa + comision;
+
+if (sueldot <= 828116) {
+     
+//document.write("se le bindara un subsidio de transporte equivalente a: $97,002      " );
+//document.write("su sueldo neto es: " + (sueldot + subsidiot)  );
+
+sueldot += subsidiot;
+console.log("tiene subsidio de transporte ")
+
+}else {
+
+document.write("<p> el porcentaje de la comision" + comision + "</p>");
+document.write("<p> El sueldo inicia es: $" + otracosa + "</p>");
+document.write("<p> El sueldo total es: $" + sueldot + "</p>");
+
+}
+
+
+</script>
+
+
+</body>
+</html>
